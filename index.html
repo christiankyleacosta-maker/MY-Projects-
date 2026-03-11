@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <title>Team Hiraya - College Project</title>
+  
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Hero section */
+    .hero {
+      background-image: url("https://i.pinimg.com/originals/93/9e/92/939e9273e3d6ef4f281cda31e9e62488.gif");
+      background-size: cover;
+      background-position: center;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero .overlay {
+      padding: 40px 20px;
+      background: rgba(0,0,0,0.3);
+      transition: all 0.6s ease;
+    }
+
+    .hero:hover .overlay {
+      backdrop-filter: blur(5px);
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 8vw, 5rem);
+      text-shadow: 5px 5px 15px rgba(0,0,0,0.8);
+      transition: transform 0.5s ease, text-shadow 0.5s ease;
+    }
+
+    .hero:hover h1 {
+      transform: scale(1.2);
+      text-shadow: -10px 10px 25px rgba(0,0,0,0.9);
+    }
+
+    /* Cards spacing */
+    .card-section {
+      padding: 50px 15px;
+    }
+
+    footer {
+      padding: 20px 0;
+      background: #f8f9fa;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Team Hiraya</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navmenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#cards">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#infoModal">About</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero">
+  <div class="overlay">
+    <h1>Team Hiraya</h1>
+    <p>Innovating Games Inspired by Filipino Folklore</p>
+    <a href="#cards" class="btn btn-primary mt-3">See Our Work</a>
+  </div>
+</header>
+
+<!-- Alerts -->
+<div class="container my-4">
+  <div class="alert alert-success justify-content-center" role="alert">
+    Welcome to Team Hiraya! Check out our game development journey.
+  </div>
+</div>
+
+<!-- Carousel -->
+<div id="carouselExample" class="carousel slide container my-5">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://i.pinimg.com/736x/32/f9/a4/32f9a4e52f33040c3a7d41f4715956da.jpg" class="d-block w-100" alt="Raya Game">
+    </div>
+    <div class="carousel-item">
+      <img src="https://i.pinimg.com/1200x/44/5f/bd/445fbd568e18550ae8a35e52b7eb217a.jpg" class="d-block w-100" alt="Team Work">
+    </div>
+    <div class="carousel-item">
+      <img src="https://i.pinimg.com/1200x/d7/a1/0d/d7a10d073e347942b50b754ae118a264.jpg" class="d-block w-100" alt="Planning">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<!-- Cards Section -->
+<section class="card-section" id="cards">
+  <div class="container">
+    <h2 class="text-center mb-4">Our Projects</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://i.pinimg.com/1200x/8e/b8/5b/8eb85ba57ac0dc1feff270cd6cbd0060.jpg" class="card-img-top" alt="Raya Game">
+          <div class="card-body">
+            <h5 class="card-title">Raya <span class="badge bg-warning">WIP</span></h5>
+            <p class="card-text">A 2D side-scroller game inspired by Filipino folklore. Players fight monsters as a girl in the Philippines.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://i.pinimg.com/736x/a7/55/8e/a7558ee8dc0de6f30d094d84808c14f9.jpg" class="card-img-top" alt="Future Project">
+          <div class="card-body">
+            <h5 class="card-title">Upcoming Project <span class="badge bg-secondary">Soon</span></h5>
+            <p class="card-text">We are planning more games and projects as we grow our skills in game development.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://i.pinimg.com/1200x/28/c2/40/28c2404c693f206021359149f11e8817.jpg" class="card-img-top" alt="Team">
+          <div class="card-body">
+            <h5 class="card-title">Our Team <span class="badge bg-success">5 Members</span></h5>
+            <p class="card-text">Kenneth (Manager), Ian Daniel & Paz (Programmers), Jenny & Kyle (Game Designers).</p>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal">More Info</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Form -->
+<section class="container my-5" id="contact">
+  <h2 class="text-center mb-4">Contact Us</h2>
+  <p class="text-center">You can reach us via email at <a href="mailto:TeamHiraya@gmail.com">TeamHiraya@gmail.com</a></p>
+  <form>
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name" placeholder="Your Name">
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="email" placeholder="TeamHiraya@gmail.com">
+    </div>
+    <div class="mb-3">
+      <label for="message" class="form-label">Message</label>
+      <textarea class="form-control" id="message" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">Send Message</button>
+  </form>
+</section>
+
+<!-- List Group -->
+<section class="container my-5">
+  <h3>Team Members</h3>
+  <ul class="list-group">
+    <li class="list-group-item">Kenneth – Manager / Head</li>
+    <li class="list-group-item">Ian Daniel – Programmer</li>
+    <li class="list-group-item">Paz – Programmer</li>
+    <li class="list-group-item">Jenny Losamia – Game Designer</li>
+    <li class="list-group-item">Kyle Acosta – Game Designer</li>
+  </ul>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="infoModal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">About Team Hiraya</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Team Hiraya</strong> is a small, aspiring indie game developer inspired by <em>Team Cherry</em>, <em>Polychroma Games</em>, and <em>Mojang</em>. We are a group of <strong>1st-year Computer Science students at Pamantasan ng Cabuyao</strong> and there are <strong>5 members</strong> in our team:</p>
+        <ul>
+          <li>Kenneth – Manager / Head</li>
+          <li>Ian Daniel – Programmer</li>
+          <li>Paz – Programmer</li>
+          <li>Jenny Losamia – Game Designer</li>
+          <li>Kyle Acosta – Game Designer</li>
+        </ul>
+        <p>We are currently developing a game called <strong>Raya</strong>, a 2D side-scroller inspired by Filipino folklore. Players will control a girl who fights monsters in the Philippines. This game is a work in progress and our first project.</p>
+        <p>The team name "<strong>Hiraya</strong>" represents freedom, creativity, and hope. We are passionate game developers, eager to grow, and invite everyone to join and support our game development journey.</p>
+        <p><strong>Contact us:</strong> <a href="mailto:TeamHiraya@gmail.com">TeamHiraya@gmail.com</a></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  &copy; 2026 Team Hiraya. All rights reserved.
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
