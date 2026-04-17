@@ -1,0 +1,116 @@
+body{
+    background-image: url("https://i.pinimg.com/originals/48/42/41/4842415e5f93c69717a67668fd1fb85b.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.Main-border{
+    background-color: rgba(171, 255, 227, 0.568);
+    margin-top: 11vw;
+    margin-bottom: 5vw;
+    margin-left: 35vw;
+    margin-right: 20vw;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    height: 500px;
+    width: 35%;
+    box-shadow: -3px 10px 5px 5px rgba(2, 57, 61, 0.459);
+    animation: motion 2s ease-out infinite;
+    animation-name: intro;
+    animation-duration: 0.7s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+}
+
+@keyframes intro{
+    from{
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes motion{
+    0%{ transform: translateY(-3px);}
+    50%{ transform: translateY( 3px);}
+    100%{ transform: translateY(-3px);}
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0%;
+    width: 100%;
+}
+.header h1{
+    font-size: 35px;
+    font-family: 'Courier Prime', monospace;
+    color: black;
+    letter-spacing: 2px;
+    transition: transform 0.5s ease-out;
+}
+.header h1:hover{
+    transform: translateY(-5px) scale(1.2);
+    text-shadow: 2px 5px 4px rgba(81, 119, 103, 0.884);
+    color: rgb(255, 255, 255);
+}
+
+.Form{
+    position: relative;
+    display: grid;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    row-gap: 15px;
+}
+
+.customize{
+    display: flex;
+    font-family: inherit;
+    padding: 5px 5px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 18px;
+    height: 35px;
+    width: 350px;
+    border-color: aliceblue;
+    background-color: rgb(177, 216, 248);
+    color: rgb(28, 28, 53);
+    justify-items: center;
+}
+.customize:focus{
+    outline: none;
+    border-color: white;
+    box-shadow: 0 0 15px rgb(255, 255, 255);
+}
+
+.Frmbtn{
+    margin-top: 30px;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 30px;
+}
+.Frmbtn-bt{
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(0, 0, 0);
+    background-color: rgba(143, 219, 219, 0.788);
+    width: 90px;
+    font-size: 15px;
+    height: 50px;
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 0 13px rgb(255, 255, 255);
+}
